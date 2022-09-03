@@ -15,7 +15,7 @@ module.exports = () => {
       main: './src/js/index.js',
       install: './src/js/install.js'
     },
-    
+
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
@@ -33,8 +33,8 @@ module.exports = () => {
     }),
 
     new WebpackPwaManifest({
-      name: 'TextEdit',
-      short_name: 'TextEdit',
+      name: 'JATE',
+      short_name: 'JATE',
       desciption: 'Build Text Editor in browser',
       start_url:'./',
       publicPath: './',
