@@ -24,7 +24,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Text Editor'
+        title: 'JATE'
       }),
 
     new InjectManifest({
@@ -33,14 +33,16 @@ module.exports = () => {
     }),
 
     new WebpackPwaManifest({
+      fingerprints: false,
+      inject: true,
       name: 'JATE',
       short_name: 'JATE',
       desciption: 'Build Text Editor in browser',
-      start_url:'./',
-      publicPath: './',
+      start_url:'/',
+      publicPath: '/',
       icons: [
         {
-          src: path.resolve('assets/images/logo.png'),
+          src: path.resolve('src/images/logo.png'),
           sizes: [96, 128, 192, 256, 384, 512],
           destination: path.join('assets', 'icons'),
         },
